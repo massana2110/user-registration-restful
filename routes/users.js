@@ -13,7 +13,7 @@ router.get('/', function(req, res, next) {
 /* POST registrar nuevo usuario */
 router.post('/', function(req, res, next) {
   try {
-    const usuarioExistente = usuariosRegistrados.find(usuario => usuario.email === req.body.email);
+    const usuarioExistente = usuariosRegistrados.find(usuario => usuario.userEmail === req.body.userEmail);
 
     if (!req.body.userName) return res.status(400).send({ error: 'El nombre es requerido' })
     if (!req.body.userEmail) return res.status(400).send({ error: 'El email es requerido' })
