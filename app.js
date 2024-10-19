@@ -9,7 +9,7 @@ const usersRouter = require('./routes/users');
 
 const app = express();
 
-const allowedOrigins = ['http://localhost:5173'];
+const allowedOrigins = ['http://localhost:5173', 'https://flourishing-pastelito-23d452.netlify.app/'];
 
 app.use(cors({
     origin: function(origin, callback){
